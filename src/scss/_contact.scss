@@ -1,0 +1,106 @@
+@mixin common-form {
+  font-size: $form-text;
+  color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0.5rem, 0.5rem;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid set-text-color($primary-color);
+}
+
+.contact {
+  height: 100vh;
+  padding-top: 10vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include background-image;
+
+  h2 {
+    padding-top: 2rem;
+    padding-left: -1rem;
+    font-size: $page-title-size;
+    margin-bottom: 2rem;
+  }
+
+  &__address {
+    padding-left: 5rem;
+  }
+
+  &__phone {
+    padding-left: 2rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .social-icons {
+    position: initial;
+    margin-top: 4rem;
+  }
+
+  form {
+    padding-top: 4rem;
+    font-size: $page-title-size;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 30vw;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    ::placeholder {
+      color: white;
+    }
+  }
+
+  .input-title {
+    font-size: 2rem;
+    color: #999999;
+    line-height: 1.5;
+    padding-left: 5px;
+  }
+
+  &__formName {
+    height: 2rem;
+    @include common-form;
+  }
+
+  &__formEmail {
+    height: 2rem;
+    @include common-form;
+  }
+
+  &__formText {
+    height: 12rem;
+    @include common-form;
+  }
+
+  .form-button {
+    padding: 1rem;
+    align-items: center !important;
+    font-size: large;
+    background-color: gray;
+    border: none;
+    border-radius: 0.5rem;
+
+    &:hover {
+      cursor: pointer;
+      color: $secondary-color;
+      transform: scale(1.1) perspective(1px);
+      background-color: lighten(gray, 10%);
+      @include transition-ease;
+    }
+  }
+}
