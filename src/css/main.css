@@ -16,7 +16,7 @@
   background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../images/background/background-balance-business-commerce-583846.jpg") center top;
   background-size: cover; }
   .home__name {
-    font-size: 5rem;
+    font-size: 4rem;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid #fff; }
@@ -207,8 +207,7 @@
     overflow: hidden;
     cursor: pointer; }
     .projects__item .gimg {
-      width: 100%;
-      z-index: -1; }
+      width: 100%; }
     .projects__item::after {
       content: "";
       position: absolute;
@@ -231,7 +230,6 @@
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 100;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -291,7 +289,7 @@
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-gap: 2rem;
-    font-size: 1.5rem; }
+    font-size: 1rem; }
   .contact .social-icons {
     position: initial;
     margin-top: 4rem; }
@@ -322,7 +320,7 @@
     .contact form ::placeholder {
       color: white; }
   .contact .input-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #999999;
     line-height: 1.5;
     padding-left: 5px; }
@@ -411,7 +409,18 @@
     font-size: 3rem; }
   .contact__list {
     -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr); } }
+        grid-template-columns: repeat(2, 1fr); }
+  .news .jobs {
+    width: 100vh;
+    margin: none;
+    background: transparent;
+    background-image: url("../images/aboutUs/Nyasha.jpg"); }
+    .news .jobs p {
+      visibility: hidden; }
+  .contact {
+    color: green; }
+    .contact .input-title {
+      color: green; } }
 
 @media screen and (min-width: 1024px) {
   .projects__items {
@@ -448,7 +457,7 @@
             justify-content: flex-end; }
     .news__image p {
       margin-bottom: 2rem;
-      font-size: 2rem; }
+      font-size: 1.5rem; }
   .news__info {
     width: 80%;
     text-align: center; }
@@ -473,6 +482,8 @@
         margin: 0.5rem 0; }
       .news .jobs__job h6 {
         margin: 0.3rem 0; }
+      .news .jobs__job p {
+        visibility: visible; }
   .news .social-icons {
     display: -webkit-box;
     display: -ms-flexbox;

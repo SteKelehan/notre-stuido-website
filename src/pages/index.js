@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Header from "../components/Global/header"
 import Footer from "../components/Global/footer"
@@ -8,7 +7,7 @@ import "../css/main.css"
 const IndexPage = () => {
   return (
     <div>
-      <Header current="Home"></Header>
+      <Header current={"Home"}></Header>
       <main>
         <section className="home">
           <h1 className="home__name">

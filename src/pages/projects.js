@@ -25,7 +25,7 @@ const Projects = () => {
   console.log(data.images.nodes)
   return (
     <div>
-      <Header current="Projects"></Header>
+      <Header current={"Projects"}></Header>
       <main>
         <section className="projects">
           <div className="projects__bio-image">
@@ -51,21 +51,6 @@ const Projects = () => {
                 </div>
               </div>
             )
-            // return (
-            //   <div key={pic}>
-            //     <div className="projects__item">
-            //       <img src={pic.node.file.url} alt="Pic not showing" />
-            //       <div className="projects__btns">
-            //         <a href="#!" className="projects__btn">
-            //           <i className="fa fa-eye"></i> Preview
-            //         </a>
-            //         <a href="#!" className="projects__btn">
-            //           <i className="fa fa-github"></i> Github
-            //         </a>
-            //       </div>
-            //     </div>
-            //   </div>
-            // )
           })}
         </section>
         <Footer></Footer>

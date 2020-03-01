@@ -43,7 +43,7 @@ const About = ({}) => {
 
   return (
     <div>
-      <Header current="About"></Header>
+      <Header current={"About"}></Header>
       <main className="about">
         <section className="intro">
           {data.images.nodes.map(pic => {
