@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link, graphql } from "gatsby"
 import Header from "../components/Global/header"
 import Footer from "../components/Global/footer"
 import "../css/main.css"
@@ -18,3 +18,7 @@ const About = () => {
 }
 
 export default About
+
+// export const pageQuery = graphql`
+
+// `

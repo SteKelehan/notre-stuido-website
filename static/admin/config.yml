@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "Pages"
+    label: "pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{page}}"
+    editor:
+     preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {label: "Page", name: "page", widget: "select", multiple: false, min: 1, max: 1,
+      options: ["Home","About","Contact","Index","News","Projects","None"],default: ["None"]}
+      
+      - { label: "Description", name: "description", widget: "string" }
+      
