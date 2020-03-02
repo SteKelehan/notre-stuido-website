@@ -45,9 +45,7 @@ const News = () => {
                     key={pic.id}
                     objectFit="cover"
                     fluid={pic.childImageSharp.fluid}
-                    // className="news__images"
                   ></Img>
-
                   <h2 className="text-secondary">2017 - Current</h2>
                   <h3>Google</h3>
                   <h6>Full Stack Developer</h6>
@@ -59,66 +57,6 @@ const News = () => {
                 </div>
               )
             })}
-            {/* <div className="jobs__job">
-              <h2 className="text-secondary">2017 - Current</h2>
-              <h3>Google</h3>
-              <h6>Full Stack Developer</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat vero dolores eum ut, culpa ullam quis quasi
-                exercitationem in adipisci.
-              </p>
-            </div>
-            <div className="jobs__job">
-              <h2 className="text-secondary">2015 - 2017</h2>
-              <h3>Microsoft</h3>
-              <h6>Front End Developer</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat vero dolores eum ut, culpa ullam quis quasi
-                exercitationem in adipisci.
-              </p>
-            </div>
-            <div className="jobs__job">
-              <h2 className="text-secondary">2012 - 2015</h2>
-              <h3>Web Design Co.</h3>
-              <h6>Graphic Designer</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat vero dolores eum ut, culpa ullam quis quasi
-                exercitationem in adipisci.
-              </p>
-            </div>
-            <div className="jobs__job">
-              <h2 className="text-secondary">2012 - 2015</h2>
-              <h3>Web Design Co.</h3>
-              <h6>Graphic Designer</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat vero dolores eum ut, culpa ullam quis quasi
-                exercitationem in adipisci.
-              </p>
-            </div>
-            <div className="jobs__job">
-              <h2 className="text-secondary">2012 - 2015</h2>
-              <h3>Web Design Co.</h3>
-              <h6>Graphic Designer</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat vero dolores eum ut, culpa ullam quis quasi
-                exercitationem in adipisci.
-              </p>
-            </div>
-            <div className="jobs__job">
-              <h2 className="text-secondary">2012 - 2015</h2>
-              <h3>Web Design Co.</h3>
-              <h6>Graphic Designer</h6>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat vero dolores eum ut, culpa ullam quis quasi
-                exercitationem in adipisci.
-              </p>
-            </div> */}
           </div>
           <Footer></Footer>
         </section>
