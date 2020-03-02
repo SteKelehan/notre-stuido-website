@@ -16,7 +16,7 @@
   background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../images/background/background-balance-business-commerce-583846.jpg") center top;
   background-size: cover; }
   .home__name {
-    font-size: 5rem;
+    font-size: 4rem;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid #fff; }
@@ -155,9 +155,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .about footer {
-    -webkit-transform: rotate(90deg) translate(-3rem, -5rem);
-            transform: rotate(90deg) translate(-3rem, -5rem); }
+  .about__images {
+    border-radius: 50%;
+    border-style: groove;
+    border-color: #00ffff;
+    text-align: center;
+    top: 25%;
+    left: 150%; }
+
+.about-footer {
+  padding: 3rem;
+  text-align: center; }
+  .about-footer i {
+    padding-inline: 1rem; }
 
 .projects {
   padding-bottom: 2rem; }
@@ -196,7 +206,7 @@
     border-bottom: 5px solid #00ffff;
     overflow: hidden;
     cursor: pointer; }
-    .projects__item img {
+    .projects__item .gimg {
       width: 100%; }
     .projects__item::after {
       content: "";
@@ -211,15 +221,15 @@
       transition: all 0.5s ease-in-out; }
     .projects__item:hover::after {
       top: 0;
-      opacity: 0.9; }
+      opacity: 0.2; }
     .projects__item:hover .projects__btn {
+      font-size: 1.5rem;
       opacity: 1; }
   .projects__btns {
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 1;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -279,7 +289,7 @@
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-gap: 2rem;
-    font-size: 1.5rem; }
+    font-size: 1rem; }
   .contact .social-icons {
     position: initial;
     margin-top: 4rem; }
@@ -310,7 +320,7 @@
     .contact form ::placeholder {
       color: white; }
   .contact .input-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #999999;
     line-height: 1.5;
     padding-left: 5px; }
@@ -399,7 +409,18 @@
     font-size: 3rem; }
   .contact__list {
     -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr); } }
+        grid-template-columns: repeat(2, 1fr); }
+  .news .jobs {
+    width: 100vh;
+    margin: none;
+    background: transparent;
+    background-image: url("../images/aboutUs/Nyasha.jpg"); }
+    .news .jobs p {
+      visibility: hidden; }
+  .contact {
+    color: green; }
+    .contact .input-title {
+      color: green; } }
 
 @media screen and (min-width: 1024px) {
   .projects__items {
@@ -436,7 +457,7 @@
             justify-content: flex-end; }
     .news__image p {
       margin-bottom: 2rem;
-      font-size: 2rem; }
+      font-size: 1.5rem; }
   .news__info {
     width: 80%;
     text-align: center; }
@@ -461,6 +482,8 @@
         margin: 0.5rem 0; }
       .news .jobs__job h6 {
         margin: 0.3rem 0; }
+      .news .jobs__job p {
+        visibility: visible; }
   .news .social-icons {
     display: -webkit-box;
     display: -ms-flexbox;
