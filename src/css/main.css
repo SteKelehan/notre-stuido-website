@@ -406,7 +406,7 @@
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr); }
   .projects .text-secondary {
-    font-size: 3rem; }
+    font-size: 2rem; }
   .contact__list {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr); } }
@@ -438,7 +438,9 @@
             flex-direction: column !important;
     left: 0 !important; }
     .jobs__job {
-      width: 100% !important; }
+      width: 100% !important;
+      margin: 0 !important;
+      margin-top: 1rem !important; }
       .jobs__job h3 {
         margin: 0 !important; }
     .jobs p {
@@ -494,7 +496,6 @@
             justify-content: center; }
     .news .jobs__job {
       width: 31%;
-      height: 200%;
       margin: 1rem;
       -webkit-box-shadow: 0 0 30px white;
               box-shadow: 0 0 30px white;
