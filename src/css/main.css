@@ -434,9 +434,7 @@
 
 @media screen and (min-width: 1600px) {
   .projects__bio-image {
-    height: 50vh; }
-  .contact form {
-    width: 30vw; } }
+    height: 50vh; } }
 
 @media screen and (max-width: 768px) {
   .social-icons {
@@ -450,8 +448,7 @@
     left: 0 !important; }
     .jobs__job {
       width: 100% !important;
-      margin: 0 !important;
-      margin-top: 1rem !important; }
+      margin: 0 !important; }
       .jobs__job h3 {
         margin: 0 !important; }
     .jobs p {
@@ -483,6 +480,8 @@
     .news__bg_image p {
       margin-bottom: 2rem;
       font-size: 1.2rem; }
+  .news__images {
+    text-align: center; }
   .news__info {
     width: 80%;
     text-align: center; }
