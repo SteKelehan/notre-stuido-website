@@ -2,15 +2,32 @@ import React from "react"
 
 import Header from "../components/Global/header"
 import Footer from "../components/Global/footer"
+import { useStaticQuery, graphql } from "gatsby"
 import "../css/main.css"
+import Img from "gatsby-image"
 
 const News = () => {
+  const data = useStaticQuery(graphql`
+    query news {
+      images: allFile(filter: { relativeDirectory: { eq: "projects" } }) {
+        nodes {
+          id
+          childImageSharp {
+            fluid(maxWidth: 500, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div>
       <Header current="News"></Header>
       <main>
         <section className="news">
-          <div className="news__image">
+          <div className="news__bg_image">
             <div className="news__info">
               <h2 className="text-secondary">News</h2>
               <p>
@@ -20,9 +37,29 @@ const News = () => {
               </p>
             </div>
           </div>
-
           <div className="jobs">
-            <div className="jobs__job">
+            {data.images.nodes.map(pic => {
+              return (
+                <div className="jobs__job">
+                  <Img
+                    key={pic.id}
+                    objectFit="cover"
+                    fluid={pic.childImageSharp.fluid}
+                    // className="news__images"
+                  ></Img>
+
+                  <h2 className="text-secondary">2017 - Current</h2>
+                  <h3>Google</h3>
+                  <h6>Full Stack Developer</h6>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Repellat vero dolores eum ut, culpa ullam quis quasi
+                    exercitationem in adipisci.
+                  </p>
+                </div>
+              )
+            })}
+            {/* <div className="jobs__job">
               <h2 className="text-secondary">2017 - Current</h2>
               <h3>Google</h3>
               <h6>Full Stack Developer</h6>
@@ -52,6 +89,36 @@ const News = () => {
                 exercitationem in adipisci.
               </p>
             </div>
+            <div className="jobs__job">
+              <h2 className="text-secondary">2012 - 2015</h2>
+              <h3>Web Design Co.</h3>
+              <h6>Graphic Designer</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat vero dolores eum ut, culpa ullam quis quasi
+                exercitationem in adipisci.
+              </p>
+            </div>
+            <div className="jobs__job">
+              <h2 className="text-secondary">2012 - 2015</h2>
+              <h3>Web Design Co.</h3>
+              <h6>Graphic Designer</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat vero dolores eum ut, culpa ullam quis quasi
+                exercitationem in adipisci.
+              </p>
+            </div>
+            <div className="jobs__job">
+              <h2 className="text-secondary">2012 - 2015</h2>
+              <h3>Web Design Co.</h3>
+              <h6>Graphic Designer</h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat vero dolores eum ut, culpa ullam quis quasi
+                exercitationem in adipisci.
+              </p>
+            </div> */}
           </div>
           <Footer></Footer>
         </section>

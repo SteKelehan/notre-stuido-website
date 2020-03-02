@@ -36,7 +36,7 @@ const Footer = ({ iconSize }) => {
         </a> */}
       </div>
 
-      <footer>&copy; Copyright 2019</footer>
+      <footer className="copy-right">&copy; Copyright 2019</footer>
     </div>
   )
 }

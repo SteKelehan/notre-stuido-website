@@ -120,7 +120,7 @@
         color: #00ffff; }
     .nav .menu-nav__link {
       display: inline-block;
-      font-size: 2rem;
+      font-size: 1rem;
       text-transform: uppercase;
       padding: 2rem 0;
       font-weight: 300;
@@ -191,7 +191,7 @@
         -ms-flex-pack: end;
             justify-content: flex-end; }
     .projects__bio-image .text-secondary {
-      font-size: 3.5rem;
+      font-size: 2.2rem;
       margin-bottom: 2rem; }
   .projects__items {
     width: 60vw;
@@ -277,7 +277,7 @@
   .contact h2 {
     padding-top: 2rem;
     padding-left: -1rem;
-    font-size: 3.5rem;
+    font-size: 2.2rem;
     margin-bottom: 2rem; }
   .contact__address {
     padding-left: 5rem; }
@@ -289,13 +289,13 @@
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-gap: 2rem;
-    font-size: 1rem; }
+    font-size: 1.1rem; }
   .contact .social-icons {
     position: initial;
     margin-top: 4rem; }
   .contact form {
     padding-top: 4rem;
-    font-size: 3.5rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
     display: flex;
     -webkit-box-orient: vertical;
@@ -326,7 +326,7 @@
     padding-left: 5px; }
   .contact__formName {
     height: 2rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -339,7 +339,7 @@
     border-bottom: 2px solid #fff; }
   .contact__formEmail {
     height: 2rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -352,7 +352,7 @@
     border-bottom: 2px solid #fff; }
   .contact__formText {
     height: 12rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -397,7 +397,7 @@
         display: inline;
         padding-right: 1.5rem; }
       .nav .menu-nav__link {
-        font-size: 1.5rem; }
+        font-size: 1.2rem; }
   .about__bio {
     font-size: 1.5rem; }
   .projects__bio-image {
@@ -409,18 +409,7 @@
     font-size: 3rem; }
   .contact__list {
     -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr); }
-  .news .jobs {
-    width: 100vh;
-    margin: none;
-    background: transparent;
-    background-image: url("../images/aboutUs/Nyasha.jpg"); }
-    .news .jobs p {
-      visibility: hidden; }
-  .contact {
-    color: green; }
-    .contact .input-title {
-      color: green; } }
+        grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (min-width: 1024px) {
   .projects__items {
@@ -434,9 +423,32 @@
   .projects__bio-image {
     height: 50vh; } }
 
+@media screen and (max-width: 768px) {
+  .social-icons {
+    visibility: hidden; }
+  .jobs {
+    width: 100% !important;
+    padding-left: 0rem !important;
+    padding-top: 1rem !important;
+    padding-right: 0rem !important;
+    padding-bottom: 1rem !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    left: 0 !important; }
+    .jobs__job {
+      width: 100% !important; }
+      .jobs__job h3 {
+        margin: 0 !important; }
+    .jobs p {
+      visibility: hidden; }
+  .copy-right {
+    visibility: hidden; } }
+
 .news {
   padding-bottom: 2rem; }
-  .news__image {
+  .news__bg_image {
     height: 30vh;
     width: 100%;
     background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3))), url("../images/background/background-balance-business-commerce-583846.jpg") center top;
@@ -455,25 +467,37 @@
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
-    .news__image p {
+    .news__bg_image p {
       margin-bottom: 2rem;
-      font-size: 1.5rem; }
+      font-size: 1.2rem; }
+  .news__images {
+    text-align: center; }
   .news__info {
     width: 80%;
     text-align: center; }
     .news__info .text-secondary {
       padding-top: 2rem;
       padding-bottom: 1rem;
-      font-size: 3.5rem; }
+      font-size: 2.2rem; }
   .news .jobs {
-    width: 60vw;
-    margin: 2rem auto 0 auto;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    grid-gap: 2rem; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .news .jobs__job {
+      width: 31%;
+      height: 200%;
+      margin: 1rem;
+      -webkit-box-shadow: 0 0 30px white;
+              box-shadow: 0 0 30px white;
       background: #414141;
       padding: 0.5rem;
       border-bottom: 5px solid #00ffff; }
@@ -482,8 +506,6 @@
         margin: 0.5rem 0; }
       .news .jobs__job h6 {
         margin: 0.3rem 0; }
-      .news .jobs__job p {
-        visibility: visible; }
   .news .social-icons {
     display: -webkit-box;
     display: -ms-flexbox;

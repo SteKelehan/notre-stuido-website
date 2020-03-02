@@ -1,7 +1,7 @@
 $primary-color: #272727;
 $secondary-color: #00ffff;
-$page-title-size: 3.5rem;
-$form-text: 1.5rem;
+$page-title-size: 2.2rem;
+$form-text: 1rem;
 
 * {
   box-sizing: border-box;
@@ -44,6 +44,12 @@ $form-text: 1.5rem;
 }
 @mixin media-xl {
   @media screen and (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }

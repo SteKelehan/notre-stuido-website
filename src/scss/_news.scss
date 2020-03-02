@@ -1,7 +1,7 @@
 .news {
   padding-bottom: 2rem;
 
-  &__image {
+  &__bg_image {
     height: 30vh;
     width: 100%;
     @include background-image;
@@ -12,8 +12,12 @@
 
     p {
       margin-bottom: 2rem;
-      font-size: 2rem;
+      font-size: 1.2rem;
     }
+  }
+
+  &__images {
+    text-align: center;
   }
 
   &__info {
@@ -28,13 +32,17 @@
   }
 
   .jobs {
-    width: 60vw;
-    margin: 2rem auto 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
     &__job {
+      width: 31%;
+      height: 200%;
+      margin: 1rem;
+
+      box-shadow: 0 0 30px white;
       background: lighten($primary-color, 10%);
       padding: 0.5rem;
       border-bottom: 5px solid $secondary-color;
