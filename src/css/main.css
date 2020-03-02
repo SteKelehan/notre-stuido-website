@@ -259,8 +259,7 @@
 
 .contact {
   height: 100vh;
-  padding-top: 10vh;
-  overflow: hidden;
+  padding-top: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,15 +279,18 @@
     font-size: 2.2rem;
     margin-bottom: 2rem; }
   .contact__address {
-    padding-left: 5rem; }
+    padding-top: 1rem; }
   .contact__phone {
-    padding-left: 2rem; }
+    padding-top: 1rem; }
   .contact__list {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-size: 1.1rem; }
   .contact .social-icons {
     position: initial;
@@ -305,10 +307,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    width: 30vw;
+    width: 80vw;
     display: -webkit-box;
     display: -ms-flexbox; }
     .contact form ::-webkit-input-placeholder {
@@ -408,8 +407,22 @@
   .projects .text-secondary {
     font-size: 2rem; }
   .contact__list {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr); } }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 1.1rem; }
+  .contact__email {
+    padding-top: 1rem; }
+  .contact__address {
+    padding-left: 5rem; }
+  .contact__phone {
+    padding-left: 2rem; }
+  .contact form {
+    width: 40vw; } }
 
 @media screen and (min-width: 1024px) {
   .projects__items {
@@ -421,7 +434,9 @@
 
 @media screen and (min-width: 1600px) {
   .projects__bio-image {
-    height: 50vh; } }
+    height: 50vh; }
+  .contact form {
+    width: 30vw; } }
 
 @media screen and (max-width: 768px) {
   .social-icons {

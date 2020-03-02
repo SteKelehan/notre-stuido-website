@@ -40,8 +40,26 @@
     }
   }
 
-  .contact__list {
-    grid-template-columns: repeat(2, 1fr);
+  .contact {
+    &__list {
+      display: flex;
+      flex-direction: row;
+      font-size: 1.1rem;
+    }
+    &__email {
+      padding-top: 1rem;
+    }
+    &__address {
+      padding-left: 5rem;
+    }
+
+    &__phone {
+      padding-left: 2rem;
+    }
+
+    form {
+      width: 40vw;
+    }
   }
 }
 
@@ -59,6 +77,11 @@
 @include media-xl {
   .projects__bio-image {
     height: 50vh;
+  }
+  .contact {
+    form {
+      width: 30vw;
+    }
   }
 }
 

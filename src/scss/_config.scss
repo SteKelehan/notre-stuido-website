@@ -32,22 +32,28 @@ $form-text: 1rem;
   background-size: cover;
 }
 
+// everything above this size
 @mixin media-md {
   @media screen and (min-width: 768px) {
     @content;
   }
 }
+
+// everything above this size
 @mixin media-lg {
   @media screen and (min-width: 1024px) {
     @content;
   }
 }
+
+// everything above this size
 @mixin media-xl {
   @media screen and (min-width: 1600px) {
     @content;
   }
 }
 
+// everything below this size
 @mixin media-sm {
   @media screen and (max-width: 768px) {
     @content;
