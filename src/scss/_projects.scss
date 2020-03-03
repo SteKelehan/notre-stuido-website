@@ -30,9 +30,8 @@
     overflow: hidden;
     cursor: pointer;
 
-    img {
+    .gimg {
       width: 100%;
-      // display: block !important;
     }
 
     &::after {
@@ -50,9 +49,10 @@
     &:hover {
       &::after {
         top: 0;
-        opacity: 0.9;
+        opacity: 0.2;
       }
       .projects__btn {
+        font-size: 1.5rem;
         opacity: 1;
       }
     }
@@ -63,7 +63,6 @@
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;

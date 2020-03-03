@@ -5,7 +5,21 @@
   @include background-image;
   display: flex;
 
-  footer {
-    transform: rotate(90deg) translate(-3rem, -5rem);
+  &__images {
+    border-radius: 50%;
+    border-style: groove;
+    border-color: $secondary-color;
+    text-align: center;
+    top: 25%;
+    left: 150%;
+  }
+}
+
+.about-footer {
+  padding: 3rem;
+  text-align: center;
+
+  i {
+    padding-inline: 1rem;
   }
 }

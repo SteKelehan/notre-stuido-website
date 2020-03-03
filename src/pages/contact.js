@@ -12,20 +12,20 @@ const Contact = () => {
     <div>
       <Header current="Contact"></Header>
       <main>
-        <section class="contact">
+        <section className="contact">
           <h2>Contact Us</h2>
-          <div class="contact__list">
-            <div class="contact__email">
-              <i class="fa fa-envelope"></i> Email
-              <div class="text-secondary">notrebigdata@gmail.com</div>
+          <div className="contact__list">
+            <div className="contact__email">
+              <i className="fa fa-envelope"></i> Email
+              <div className="text-secondary">notrebigdata@gmail.com</div>
             </div>
-            <div class="contact__phone">
-              <i class="fa fa-mobile-alt"></i> Phone
-              <div class="text-secondary">+44 (0) 748 424 1871</div>
+            <div className="contact__phone">
+              <i className="fa fa-mobile-alt"></i> Phone
+              <div className="text-secondary">+44 (0) 748 424 1871</div>
             </div>
-            <div class="contact__address">
-              <i class="fa fa-marker-alt"></i> Address
-              <div class="text-secondary">In the cloud</div>
+            <div className="contact__address">
+              <i className="fa fa-marker-alt"></i> Address
+              <div className="text-secondary">In the cloud</div>
             </div>
           </div>
           <div>
