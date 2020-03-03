@@ -1,10 +1,10 @@
 import React from "react"
-
+import { Link, graphql } from "gatsby"
 import Header from "../components/Global/header"
 import Footer from "../components/Global/footer"
 import "../css/main.css"
 
-import { graphql, useStaticQuery } from "gatsby"
+import { useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 const About = ({}) => {
@@ -65,3 +65,7 @@ const About = ({}) => {
 }
 
 export default About
+
+// export const pageQuery = graphql`
+
+// `
