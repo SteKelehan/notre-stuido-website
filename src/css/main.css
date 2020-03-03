@@ -406,23 +406,25 @@
         grid-template-columns: repeat(2, 1fr); }
   .projects .text-secondary {
     font-size: 2rem; }
-  .contact__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    font-size: 1.1rem; }
-  .contact__email {
-    padding-top: 1rem; }
-  .contact__address {
-    padding-left: 5rem; }
-  .contact__phone {
-    padding-left: 2rem; }
-  .contact form {
-    width: 40vw; } }
+  .contact {
+    padding-top: 6rem !important; }
+    .contact__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      font-size: 1.1rem; }
+    .contact__email {
+      padding-top: 1rem; }
+    .contact__address {
+      padding-left: 5rem; }
+    .contact__phone {
+      padding-left: 2rem; }
+    .contact form {
+      width: 60vw; } }
 
 @media screen and (min-width: 1024px) {
   .projects__items {
@@ -436,7 +438,7 @@
   .projects__bio-image {
     height: 50vh; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 766px) {
   .social-icons {
     visibility: hidden; }
   .jobs {
@@ -453,6 +455,9 @@
         margin: 0 !important; }
     .jobs p {
       visibility: hidden; }
+  .contact {
+    padding-top: 0 !important;
+    overflow: hidden; }
   .copy-right {
     visibility: hidden; } }
 

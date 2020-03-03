@@ -41,6 +41,8 @@
   }
 
   .contact {
+    padding-top: 6rem !important;
+
     &__list {
       display: flex;
       flex-direction: row;
@@ -56,9 +58,8 @@
     &__phone {
       padding-left: 2rem;
     }
-
     form {
-      width: 40vw;
+      width: 60vw;
     }
   }
 }
@@ -102,6 +103,11 @@
     p {
       visibility: hidden;
     }
+  }
+
+  .contact {
+    padding-top: 0 !important;
+    overflow: hidden;
   }
 
   .copy-right {
