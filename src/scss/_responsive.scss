@@ -41,6 +41,8 @@
   }
 
   .contact {
+    padding-top: 6rem !important;
+
     &__list {
       display: flex;
       flex-direction: row;
@@ -56,9 +58,8 @@
     &__phone {
       padding-left: 2rem;
     }
-
     form {
-      width: 40vw;
+      width: 60vw;
     }
   }
 }
@@ -78,11 +79,6 @@
   .projects__bio-image {
     height: 50vh;
   }
-  .contact {
-    form {
-      width: 30vw;
-    }
-  }
 }
 
 @include media-sm {
@@ -92,13 +88,14 @@
 
   .jobs {
     width: 100% !important;
+
     flex-direction: column !important;
 
     left: 0 !important;
     &__job {
       width: 100% !important;
+
       margin: 0 !important;
-      margin-top: 1rem !important;
       h3 {
         margin: 0 !important;
       }
@@ -106,6 +103,11 @@
     p {
       visibility: hidden;
     }
+  }
+
+  .contact {
+    padding-top: 0 !important;
+    overflow: hidden;
   }
 
   .copy-right {

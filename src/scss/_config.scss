@@ -53,9 +53,8 @@ $form-text: 1rem;
   }
 }
 
-// everything below this size
 @mixin media-sm {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 766px) {
     @content;
   }
 }
