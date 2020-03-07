@@ -1,6 +1,6 @@
 ---
 title: Notre Test
-page: Index
+page: Home
 description: Web Developers & Programmers
 ---
 
