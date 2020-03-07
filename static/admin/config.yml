@@ -1,22 +1,28 @@
 backend:
   name: git-gateway
   branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "Pages"
-    label: "pages"
-    folder: "content/pages"
-    create: true
-    slug: "{{page}}"
-    editor:
-     preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - {label: "Page", name: "page", widget: "select", multiple: false, min: 1, max: 1,
-      options: ["Home","About","Contact","Index","News","Projects","None"],default: ["None"]}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Landing Page"
+        name: "index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: "Title White", name: titleWhite, widget: string}
+          - {label: "Title Blue", name: titleBlue, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Description, name: description, widget: string}
       
-      - { label: "Description", name: "description", widget: "string" }
       
