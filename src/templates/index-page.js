@@ -5,8 +5,12 @@ import Footer from "../components/Global/footer"
 import "../css/main.css"
 
 const IndexPage = ({ data }) => {
-  const title = data.allMarkdownRemark.edges[0].node.frontmatter.title.split(' ')
-  const  description = data.allMarkdownRemark.edges[0].node.frontmatter.description
+  const {
+    titleBlue,
+    titleWhite,
+    title,
+    description,
+  } = data.markdownRemark.frontmatter
   
   return (
     <div>
@@ -14,7 +18,7 @@ const IndexPage = ({ data }) => {
       <main>
         <section className="home">
           <h1 className="home__name">
-            {title[0]} <span className="home__name--last">{title[1]}</span>
+            {titleWhite} <span className="home__name--last">{titleBlue}</span>
           </h1>
           <h2>{description}</h2>
           <Footer></Footer>
@@ -28,15 +32,12 @@ export default IndexPage
 
 export const pageQuery = graphql`
   {
-    allMarkdownRemark(filter: { frontmatter: { page: { eq: "Home" } } }) {
-      edges {
-        node {
-          frontmatter {
-            description
-            page
-            title
-          }
-        }
+    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      frontmatter {
+        titleBlue
+        titleWhite
+        title
+        description
       }
     }
   }
