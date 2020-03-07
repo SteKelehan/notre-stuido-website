@@ -2,9 +2,9 @@ import React from "react"
 
 import Header from "../components/Global/header"
 import Footer from "../components/Global/footer"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import "../css/main.css"
-import Img from "gatsby-image"
+import NewsCard from '../components/news'
 
 const News = ({ data }) => {
   console.log(data.images.nodes)
@@ -26,21 +26,7 @@ const News = ({ data }) => {
             {data.images.nodes.map(pic => {
               if (pic.childImageSharp) {
                 return (
-                  <div className="jobs__job">
-                    <Img
-                      key={pic.id}
-                      objectFit="cover"
-                      fluid={pic.childImageSharp.fluid}
-                    ></Img>
-                    <h2 className="text-secondary">2017 - Current</h2>
-                    <h3>Google</h3>
-                    <h6>Full Stack Developer</h6>
-                    <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellat vero dolores eum ut, culpa ullam quis quasi
-                      exercitationem in adipisci.
-                    </p>
-                  </div>
+                  <NewsCard pic={pic}/>
                 )
               }
             })}

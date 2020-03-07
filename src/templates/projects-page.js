@@ -4,7 +4,7 @@ import Header from "../components/Global/header"
 import Footer from "../components/Global/footer"
 import { graphql } from "gatsby"
 import "../css/main.css"
-import Img from "gatsby-image"
+import Project from '../components/project'
 
 const Projects = ({data}) => {
   const {title} = data
@@ -20,23 +20,7 @@ const Projects = ({data}) => {
           {data.images.nodes.map(pic => {
             if(pic.childImageSharp){
             return (
-              <div className="projects__item">
-                <Img
-                  key={pic.id}
-                  fluid={pic.childImageSharp.fluid}
-                  className="gimg"
-                ></Img>
-                <div className="projects__btns">
-                  <a href="#!" className="projects__btn">
-                    <i className="fa fa-eye fa-4x"></i>
-                    <div>Preview</div>
-                  </a>
-                  <a href="#!" className="projects__btn">
-                    <i className="fa fa-github fa-4x"></i>
-                    <div>Github</div>
-                  </a>
-                </div>
-              </div>
+              <Project pic={pic}/>
             )}
           })}
         </section>
