@@ -1,7 +1,6 @@
 ---
-title: Notre Studio
-
-page:
-  - Home
-description: Web Developers, Designers & Programmers
+title: Notre Studio Test
+page: Index
+description: Web Developers & Programmers
 ---
+
