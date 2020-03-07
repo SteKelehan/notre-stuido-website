@@ -23,5 +23,34 @@ collections:
           - {label: "Title White", name: titleWhite, widget: string}
           - {label: "Title Blue", name: titleBlue, widget: string}
           - {label: Description, name: description, widget: string}
-      
-      
+      - file: "src/pages/contact/index.md"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+          - {label: "Page Title", name: title, widget: string}
+          - {label: "Email", name: email, widget: string}
+          - {label: "Phone Number", name: phone, widget: string}
+          - {label: "Address", name: address, widget: object, fields:[
+              {label: "Address Line 1", name: addressLine1, widget: string, required: true},
+              {label: "Address Line 2", name: addressLine2, widget: string, required: false},
+              {label: "City", name: city, widget: string, required: false},
+              {label: "County", name: county, widget: string, required: false},
+              {label: "Postcode", name: postcode, widget: string, required: false}
+          ]}
+          - {label: Description, name: description, widget: string}         
+      - file: "src/pages/news/index.md"
+        label: "News Page"
+        name: "news"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-page"}
+          - {label: "Page Title", name: title, widget: string}
+          - {label: Description, name: description, widget: string}  
+      - file: "src/pages/projects/index.md"
+        label: "Projects Page"
+        name: "projects"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "projects-page"}
+          - {label: "Page Title", name: title, widget: string}
+    
+    
