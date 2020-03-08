@@ -8,7 +8,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.19.7",
-    "gatsby-image": "^2.2.41",
+    "gatsby-image": "^2.2.43",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-netlify-cms": "^4.1.40",
     "gatsby-plugin-offline": "^3.0.32",
@@ -16,6 +16,7 @@
     "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-remark-copy-linked-files": "^2.1.37",
     "gatsby-remark-images": "^3.1.44",
+    "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-remark-responsive-iframe": "^2.2.32",
     "gatsby-remark-smartypants": "^2.1.21",
     "gatsby-source-contentful": "^2.1.86",
@@ -28,7 +29,8 @@
     "react-dom": "^16.12.0",
     "react-fontawesome": "^1.7.1",
     "react-helmet": "^5.2.1",
-    "react-is-scrolling": "^1.0.1"
+    "typography": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
