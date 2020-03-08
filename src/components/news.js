@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 
-const News = ({pic}) => {
+const News = ({pic, title, description, date, tags}) => {
   return (
     <div className="jobs__job">
       <Img
@@ -9,13 +9,15 @@ const News = ({pic}) => {
         objectFit="cover"
         fluid={pic.childImageSharp.fluid}
       ></Img>
-      <h2 className="text-secondary">2017 - Current</h2>
-      <h3>Google</h3>
-      <h6>Full Stack Developer</h6>
+      
+      <h3>{title}</h3>
+      <h6>{date}</h6>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat vero
-        dolores eum ut, culpa ullam quis quasi exercitationem in adipisci.
+        {description}
       </p>
+      {tags.map(tag=>{
+        return(<h6 className="text-secondary">{tag}</h6>)
+      })}
     </div>
   )
 }
