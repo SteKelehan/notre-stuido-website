@@ -20,10 +20,7 @@
   @include background-image;
 
   h2 {
-    padding-top: 2rem;
-    padding-left: -1rem;
-    font-size: $page-title-size;
-    margin-bottom: 2rem;
+    @include page-title;
   }
 
   &__address {
@@ -39,11 +36,6 @@
     display: flex;
     flex-direction: column;
     font-size: 1.1rem;
-  }
-
-  .social-icons {
-    position: initial;
-    margin-top: 4rem;
   }
 
   form {
@@ -101,4 +93,23 @@
       @include transition-ease;
     }
   }
+}
+
+.social-icons-contact {
+  background: #2f2f2f;
+  box-shadow: $box-shaddow;
+  padding: 2%;
+  a {
+    padding: 0.4rem;
+    @include transition-ease;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.copy-right-contact {
+  padding: 0.4rem;
+  float: right;
 }

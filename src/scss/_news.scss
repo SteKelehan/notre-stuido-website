@@ -25,9 +25,7 @@
     text-align: center;
 
     .text-secondary {
-      padding-top: 2rem;
-      padding-bottom: 1rem;
-      font-size: $page-title-size;
+      @include page-title;
     }
   }
 
@@ -41,7 +39,7 @@
       width: 31%;
       margin: 1rem;
 
-      box-shadow: 0 0 30px white;
+      box-shadow: $box-shaddow;
       background: lighten($primary-color, 10%);
       padding: 0.5rem;
       border-bottom: 5px solid $secondary-color;

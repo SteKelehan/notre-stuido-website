@@ -57,8 +57,24 @@ const Contact = () => {
               Send <i className="fa fa-arrow-right"></i>
             </button>
           </div>
-          <Footer iconSize="fa-4x"></Footer>
         </section>
+        <div>
+          <div className="social-icons-contact">
+            <a href="#!">
+              <i className="fa fa-twitter fa-2x"></i>
+            </a>
+            <a href="#!">
+              <i className="fa fa-facebook fa-2x"></i>
+            </a>
+            <a href="#!">
+              <i className="fa fa-instagram fa-2x"></i>
+            </a>
+            <a href="#!">
+              <i className="fa fa-github fa-2x"></i>
+            </a>
+            <span className="copy-right-contact">&copy; Copyright 2019</span>
+          </div>
+        </div>
       </main>
     </div>
   )

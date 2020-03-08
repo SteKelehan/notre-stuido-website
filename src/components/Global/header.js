@@ -1,6 +1,6 @@
-import React from "react"
+import React, { Component } from "react"
 import { Link } from "gatsby"
-
+import classnames from "classnames"
 import "../../css/main.css"
 
 export default class Header extends React.Component {
@@ -8,12 +8,39 @@ export default class Header extends React.Component {
     super(props)
     this.state = {
       active: false,
+      prevScrollpos: window.pageYOffset,
+      visible: false,
     }
     this.toggleClass = this.toggleClass.bind(this)
   }
   toggleClass() {
     const currentState = this.state.active
     this.setState({ active: !currentState })
+  }
+
+  // Adds an event listener when the component is mount.
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll)
+  }
+
+  // Remove the event listener when the component is unmount.
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll)
+  }
+
+  // Hide or show the menu.
+  handleScroll = () => {
+    const { prevScrollpos } = this.state
+
+    const currentScrollPos = window.pageYOffset
+    const visible =
+      prevScrollpos !== currentScrollPos &&
+      !this.state.active &&
+      currentScrollPos !== 0
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      visible,
+    })
     console.log(this.state)
   }
 
@@ -57,7 +84,7 @@ export default class Header extends React.Component {
 
     return (
       <header>
-        <div className="menu-btn">
+        <div className="menu-btn ">
           <span
             onClick={this.toggleClass}
             className={
@@ -66,7 +93,13 @@ export default class Header extends React.Component {
           ></span>
         </div>
         <nav className={this.state.active ? "nav" : "nav open"}>
-          <ul className={this.state.active ? "menu-nav" : "menu-nav open"}>
+          <ul
+            // className={this.state.active ? "menu-nav" : "menu-nav open"}
+            className={classnames("menu-nav", {
+              "menu-nav-scrolling": !this.state.visible,
+              open: !this.state.active,
+            })}
+          >
             <li className={this.state.active ? home : home + " open"}>
               <Link
                 to="/"
