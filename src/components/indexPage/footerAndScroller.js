@@ -8,7 +8,8 @@ export default class FooterAndScroller extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      prevScrollpos: window.pageYOffset,
+      prevScrollpos:
+        typeof window !== `undefined` ? window.pageYOffset : undefined,
       visible: false,
     }
   }
@@ -27,7 +28,8 @@ export default class FooterAndScroller extends React.Component {
   handleScroll = () => {
     const { prevScrollpos } = this.state
 
-    const currentScrollPos = window.pageYOffset
+    const currentScrollPos =
+      typeof window !== `undefined` ? window.pageYOffset : undefined
     const visible = prevScrollpos !== currentScrollPos && currentScrollPos !== 0
     this.setState({
       prevScrollpos: currentScrollPos,
@@ -39,13 +41,7 @@ export default class FooterAndScroller extends React.Component {
     if (!this.state.visible) {
       return (
         <div>
-          <i
-            className={classnames({
-              "fa fa-angle-down fa-2x home__scroll-down": !this.state.visible,
-            })}
-          >
-            {" "}
-          </i>
+          <i className="fa fa-sort-down fa-2x home__scroll-down"> </i>
           <Footer></Footer>
         </div>
       )

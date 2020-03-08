@@ -8,7 +8,8 @@ export default class Header extends React.Component {
     super(props)
     this.state = {
       active: false,
-      prevScrollpos: window.pageYOffset,
+      prevScrollpos:
+        typeof window !== `undefined` ? window.pageYOffset : undefined,
       visible: false,
     }
     this.toggleClass = this.toggleClass.bind(this)
@@ -32,7 +33,8 @@ export default class Header extends React.Component {
   handleScroll = () => {
     const { prevScrollpos } = this.state
 
-    const currentScrollPos = window.pageYOffset
+    const currentScrollPos =
+      typeof window !== `undefined` ? window.pageYOffset : undefined
     const visible =
       prevScrollpos !== currentScrollPos &&
       !this.state.active &&
