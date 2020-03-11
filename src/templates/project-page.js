@@ -1,10 +1,7 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import { rhythm, scale } from "../utils/typography"
-import Header from '../components/Global/header'
-import Footer from '../components/Global/footer'
+import React from 'react'
 
-const NewsArticle = ({ data }) => {
+
+const ProjectPage = ({ data }) => {
   const { html } = data.markdownRemark
   const { title, date } = data.markdownRemark.frontmatter
   return (
@@ -45,10 +42,10 @@ const NewsArticle = ({ data }) => {
   )
 }
 
-export default NewsArticle
+export default ProjectPage
 
 export const pageQuery = graphql`
-  query NewsArticleByID($id: String!) {
+  query ProjectByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
