@@ -11,16 +11,16 @@ values:
   vibe: >
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta reiciendis animi ab iusto tenetur quod. Unde voluptas hic, inventore obcaecati exercitationem debitis consequatur dolores numquam eum, architecto ullam, pariatur at?
 story:
-  "2015": >
+  Y2015: >
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta reiciendis animi ab iusto tenetur quod. Unde voluptas hic, inventore obcaecati exercitationem debitis consequatur dolores numquam eum, architecto ullam, pariatur at?      
-  "2016": >
+  Y2016: >
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta reiciendis animi ab iusto tenetur quod. Unde voluptas hic, inventore obcaecati exercitationem debitis consequatur dolores numquam eum, architecto ullam, pariatur at?      
-  "2017": >
+  Y2017: >
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta reiciendis animi ab iusto tenetur quod. Unde voluptas hic, inventore obcaecati exercitationem debitis consequatur dolores numquam eum, architecto ullam, pariatur at?    
-  "2018": >
+  Y2018: >
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta reiciendis animi ab iusto tenetur quod. Unde voluptas hic, inventore obcaecati exercitationem debitis consequatur dolores numquam eum, architecto ullam, pariatur at?      
-  "2019": >
+  Y2019: >
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta reiciendis animi ab iusto tenetur quod. Unde voluptas hic, inventore obcaecati exercitationem debitis consequatur dolores numquam eum, architecto ullam, pariatur at?      
-  "2020": >
+  Y2020: >
     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta reiciendis animi ab iusto tenetur quod. Unde voluptas hic, inventore obcaecati exercitationem debitis consequatur dolores numquam eum, architecto ullam, pariatur at?        
 ---
