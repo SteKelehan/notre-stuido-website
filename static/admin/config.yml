@@ -75,13 +75,13 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Page Title", name: title, widget: string}
-          - {values: "Values", name: values, widget: object, fields:[
+          - {label: "Values", name: values, widget: object, fields:[
               {label: "Mission", name: mission, widget: string, required: true},
               {label: "Style", name: style, widget: string, required: true},
               {label: "Promise", name: promise, widget: string, required: true},
               {label: "Vibe", name: vibe, widget: string, required: true}
           ]}
-          - {values: "Story", name: story, widget: object, fields:[
+          - {label: "Story", name: story, widget: object, fields:[
               {label: "2015", name: 2015, widget: string, required: true},
               {label: "2016", name: 2016, widget: string, required: true},
               {label: "2017", name: 2017, widget: string, required: true},
