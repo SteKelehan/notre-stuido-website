@@ -82,12 +82,12 @@ collections:
               {label: "Vibe", name: vibe, widget: string, required: true}
           ]}
           - {label: "Story", name: story, widget: object, fields:[
-              {label: "2015", name: 2015, widget: string, required: true},
-              {label: "2016", name: 2016, widget: string, required: true},
-              {label: "2017", name: 2017, widget: string, required: true},
-              {label: "2018", name: 2018, widget: string, required: true},
-              {label: "2019", name: 2019, widget: string, required: true},
-              {label: "2020", name: 2020, widget: string, required: true}
+              {label: "2015", name: "_2015", widget: string, required: true},
+              {label: "2016", name: "_2016", widget: string, required: true},
+              {label: "2017", name: "_2017", widget: string, required: true},
+              {label: "2018", name: "_2018", widget: string, required: true},
+              {label: "2019", name: "_2019", widget: string, required: true},
+              {label: "2020", name: "_2020", widget: string, required: true}
           ]}
       - file: "src/pages/news/index.md"
         label: "News Page"
