@@ -68,31 +68,34 @@ collections:
               {label: "County", name: county, widget: string, required: false},
               {label: "Postcode", name: postcode, widget: string, required: false}
           ]}
-          - {label: Description, name: description, widget: string}         
-      # - file: "src/pages/about/index.md"
-      #   label: "About Page"
-      #   name: "about"
-      #TODO: Create CMS config and test on notre studio website.
-      #   fields:
-      #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
-      #     - {label: "Page Title", name: title, widget: string}
-      #     - {label: "Email", name: email, widget: string}
-      #     - {label: "Phone Number", name: phone, widget: string}
-      #     - {label: "Address", name: address, widget: object, fields:[
-      #         {label: "Address Line 1", name: addressLine1, widget: string, required: true},
-      #         {label: "Address Line 2", name: addressLine2, widget: string, required: false},
-      #         {label: "City", name: city, widget: string, required: false},
-      #         {label: "County", name: county, widget: string, required: false},
-      #         {label: "Postcode", name: postcode, widget: string, required: false}
+          - {label: Description, name: description, widget: string}  
+      - file: "src/pages/about/index.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
+          - {label: "Page Title", name: title, widget: string}
+          - {values: "Values", name: values, widget: object, fields:[
+              {label: "Mission", name: mission, widget: string, required: true},
+              {label: "Style", name: style, widget: string, required: true},
+              {label: "Promise", name: promise, widget: string, required: true},
+              {label: "Vibe", name: vibe, widget: string, required: true}
           ]}
-          - {label: Description, name: description, widget: string}
+          - {values: "Story", name: story, widget: object, fields:[
+              {label: "2015", name: 2015, widget: string, required: true},
+              {label: "2016", name: 2016, widget: string, required: true},
+              {label: "2017", name: 2017, widget: string, required: true},
+              {label: "2018", name: 2018, widget: string, required: true},
+              {label: "2019", name: 2019, widget: string, required: true},
+              {label: "2020", name: 2020, widget: string, required: true}
+          ]}
       - file: "src/pages/news/index.md"
         label: "News Page"
         name: "news"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-page"}
           - {label: "Page Title", name: title, widget: string}
-          - {label: Description, name: description, widget: string}  
+          - {label: Description, name: description, widget: string} 
       - file: "src/pages/projects/index.md"
         label: "Projects Page"
         name: "projects"
