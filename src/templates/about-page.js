@@ -6,7 +6,6 @@ import "font-awesome/css/font-awesome.min.css"
 import Img from "gatsby-image"
 
 const About = ({ data }) => {
-
   const { title, story, values } = data.markdownRemark.frontmatter
   console.log(title)
   console.log(values)
@@ -100,24 +99,20 @@ const About = ({ data }) => {
         <section>
           <div className="wrapper">
             <h2 className="about__team-heading ">Meet the team</h2>
-            {data.images.nodes.map(pic => {
+            {data.allMarkdownRemark.edges.map(edge => {
               return (
                 <div className="info">
-                  {/* <h2>Name: {pic.name}</h2> */}
                   <p className="paragraph">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Soluta reiciendis animi ab iusto tenetur quod. Unde voluptas
-                    hic, inventore obcaecati exercitationem debitis consequatur
-                    dolores numquam eum, architecto ullam, pariatur at? Lorem,
-                    ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                    reiciendis animi ab iusto tenetur quod. Unde voluptas hic,
-                    inventore obcaecati exercitationem debitis consequatur
-                    dolores numquam eum, architecto ullam, pariatur at?
+                    <p>
+                      <strong>{edge.node.frontmatter.position}</strong>
+                    </p>
+                    <p /> <p>{edge.node.frontmatter.bio}</p>
                   </p>
-
                   <Img
-                    key={pic.id}
-                    fixed={pic.childImageSharp.fixed}
+                    key={edge.node.id}
+                    fixed={
+                      edge.node.frontmatter.featuredimage.childImageSharp.fixed
+                    }
                     objectFit="cover"
                     objectPosition="50% 50%"
                     className="round"
@@ -153,16 +148,26 @@ export default About
 
 export const pageQuery = graphql`
   {
-    images: allFile(filter: { relativeDirectory: { eq: "aboutUs" } }) {
-      nodes {
-        id
-
-        childImageSharp {
-          fixed(width: 350, height: 400) {
-            ...GatsbyImageSharpFixed
+    allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "employee" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            featuredimage {
+              childImageSharp {
+                fixed(width: 350, height: 400) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            lastName
+            firstName
+            bio
+            position
           }
         }
-        name
       }
     }
     markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
