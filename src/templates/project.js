@@ -1,5 +1,8 @@
 import React from 'react'
-
+import { graphql } from "gatsby"
+import { rhythm, scale } from "../utils/typography"
+import Header from '../components/Global/header'
+import Footer from '../components/Global/footer'
 
 const ProjectPage = ({ data }) => {
   const { html } = data.markdownRemark
