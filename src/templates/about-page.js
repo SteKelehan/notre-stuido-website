@@ -60,37 +60,37 @@ const About = ({ data }) => {
               <div class="container left">
                 <div class="content">
                   <h2>2015</h2>
-                  <p> {story._2015}</p>
+                  <p> {story.Y2015}</p>
                 </div>
               </div>
               <div class="container right">
                 <div class="content">
                   <h2>2016</h2>
-                  <p>{story._2016}</p>
+                  <p>{story.Y2016}</p>
                 </div>
               </div>
               <div class="container left">
                 <div class="content">
                   <h2>2017</h2>
-                  <p>{story._2017}</p>
+                  <p>{story.Y2017}</p>
                 </div>
               </div>
               <div class="container right">
                 <div class="content">
                   <h2>2018</h2>
-                  <p>{story._2018}</p>
+                  <p>{story.Y2018}</p>
                 </div>
               </div>
               <div class="container left">
                 <div class="content">
                   <h2>2019</h2>
-                  <p>{story._2019}</p>
+                  <p>{story.Y2019}</p>
                 </div>
               </div>
               <div class="container right">
                 <div class="content">
                   <h2>2020</h2>
-                  <p>{story._2020}</p>
+                  <p>{story.Y2020}</p>
                 </div>
               </div>
             </div>
@@ -170,12 +170,12 @@ export const pageQuery = graphql`
       frontmatter {
         title
         story {
-          _2015
-          _2016
-          _2019
-          _2017
-          _2018
-          _2020
+          Y2015
+          Y2016
+          Y2019
+          Y2017
+          Y2018
+          Y2020
         }
         values {
           mission
