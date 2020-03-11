@@ -4,11 +4,11 @@ import Header from "../components/Global/header"
 import Footer from "../components/Global/footer"
 import { graphql } from "gatsby"
 import "../css/main.css"
-import Project from '../components/project'
+import Project from "../components/project"
 
-const Projects = ({data}) => {
-  const {title} = data
-  console.log(data.images.nodes)
+const Projects = ({ data }) => {
+  const { title } = data.markdownRemark.frontmatter
+  const edges = data.allMarkdownRemark.edges
   return (
     <div>
       <Header current={"Projects"}></Header>
@@ -17,11 +17,11 @@ const Projects = ({data}) => {
           <div className="projects__bio-image">
             <h1 className="text-secondary">{title}</h1>
           </div>
-          {data.images.nodes.map(pic => {
-            if(pic.childImageSharp){
-            return (
-              <Project pic={pic}/>
-            )}
+          {edges.map(edge => {
+            const pic = edge.node.frontmatter.featuredimage
+            if (pic.childImageSharp) {
+              return <Project key={edge.node.id} pic={pic} />
+            }
           })}
         </section>
         <Footer></Footer>
@@ -34,12 +34,21 @@ export default Projects
 
 export const pageQuery = graphql`
   {
-    images: allFile(filter: { relativeDirectory: { eq: "projects" } }) {
-      nodes {
-        id
-        childImageSharp {
-          fluid(maxWidth: 2000, quality: 100) {
-            ...GatsbyImageSharpFluid
+    allMarkdownRemark(
+      limit: 1000
+      filter: { frontmatter: { templateKey: { eq: "project" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            featuredimage {
+              childImageSharp {
+                fluid(maxWidth: 500, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

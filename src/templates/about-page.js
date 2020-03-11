@@ -1,60 +1,37 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Header from "../components/Global/header"
 import "../css/main.css"
 import "font-awesome/css/font-awesome.min.css"
-
-import { useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-const About = ({}) => {
-  const data = useStaticQuery(graphql`
-    query Photos {
-      images: allFile(filter: { relativeDirectory: { eq: "aboutUs" } }) {
-        nodes {
-          id
+const About = ({ data }) => {
 
-          childImageSharp {
-            fixed(width: 350, height: 400) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-          name
-        }
-      }
-    }
-  `)
+  const { title, story, values } = data.markdownRemark.frontmatter
+  console.log(title)
+  console.log(values)
+  console.log(story)
 
   return (
     <div>
       <Header current={"About"}></Header>
       <main className="about">
         <section className="about__info">
-          <h2 className="title">ABOUT US</h2>
+          <h2 className="title">{title}</h2>
           <div className="about_messages">
             <div className="about_messages_item">
               <h3>Our Mission</h3>
               <a href="#!">
                 <i className="fa fa-bullseye fa-4x"></i>
               </a>
-              <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                reiciendis animi ab iusto tenetur quod. Unde voluptas hic,
-                inventore obcaecati exercitationem debitis consequatur dolores
-                numquam eum, architecto ullam, pariatur at?
-              </div>
+              <div>{values.style}</div>
             </div>
             <div className="about_messages_item">
               <h3>Our Style</h3>
               <a href="#!">
                 <i className="fa fa-bolt fa-4x"></i>
               </a>
-              <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                reiciendis animi ab iusto tenetur quod. Unde voluptas hic,
-                inventore obcaecati exercitationem debitis consequatur dolores
-                numquam eum, architecto ullam, pariatur at?
-              </div>
+              <div>{values.mission}</div>
             </div>
             <div className="about_messages_item">
               <h3>Our Promise</h3>
@@ -62,24 +39,14 @@ const About = ({}) => {
                 <span className="onehundrud">100</span>
                 <i className="fa fa-percent fa-3x"></i>
               </a>
-              <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                reiciendis animi ab iusto tenetur quod. Unde voluptas hic,
-                inventore obcaecati exercitationem debitis consequatur dolores
-                numquam eum, architecto ullam, pariatur at?
-              </div>
+              <div>{values.promise}</div>
             </div>
             <div className="about_messages_item">
               <h3>Our Vibe</h3>
               <a href="#!">
                 <i className="fa fa-heart fa-4x"></i>
               </a>
-              <div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
-                reiciendis animi ab iusto tenetur quod. Unde voluptas hic,
-                inventore obcaecati exercitationem debitis consequatur dolores
-                numquam eum, architecto ullam, pariatur at?
-              </div>
+              <div>{values.vibe}</div>
             </div>
           </div>
         </section>
@@ -92,44 +59,38 @@ const About = ({}) => {
             <div class="timeline">
               <div class="container left">
                 <div class="content">
-                  <h2>2017</h2>
-                  <p>
-                    {" "}
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Soluta reiciendis animi ab iusto tenetur quod. Unde voluptas
-                    hic, inventore obcaecati exercitationem debitis consequatur
-                    dolores numquam eum, architecto ullam, pariatur at?
-                  </p>
+                  <h2>2015</h2>
+                  <p> {story._2015}</p>
                 </div>
               </div>
               <div class="container right">
                 <div class="content">
                   <h2>2016</h2>
-                  <p>Lorem ipsum..</p>
+                  <p>{story._2016}</p>
                 </div>
               </div>
               <div class="container left">
                 <div class="content">
                   <h2>2017</h2>
-                  <p>Lorem ipsum..</p>
+                  <p>{story._2017}</p>
                 </div>
               </div>
               <div class="container right">
                 <div class="content">
-                  <h2>2016</h2>
-                  <p>Lorem ipsum..</p>
+                  <h2>2018</h2>
+                  <p>{story._2018}</p>
                 </div>
               </div>
               <div class="container left">
                 <div class="content">
-                  <h2>2017</h2>
-                  <p>Lorem ipsum..</p>
+                  <h2>2019</h2>
+                  <p>{story._2019}</p>
                 </div>
               </div>
               <div class="container right">
                 <div class="content">
-                  <h2>2016</h2>
-                  <p>Lorem ipsum..</p>
+                  <h2>2020</h2>
+                  <p>{story._2020}</p>
                 </div>
               </div>
             </div>
@@ -189,3 +150,40 @@ const About = ({}) => {
 }
 
 export default About
+
+export const pageQuery = graphql`
+  {
+    images: allFile(filter: { relativeDirectory: { eq: "aboutUs" } }) {
+      nodes {
+        id
+
+        childImageSharp {
+          fixed(width: 350, height: 400) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+        name
+      }
+    }
+    markdownRemark(frontmatter: { templateKey: { eq: "about-page" } }) {
+      id
+      frontmatter {
+        title
+        story {
+          _2015
+          _2016
+          _2019
+          _2017
+          _2018
+          _2020
+        }
+        values {
+          mission
+          promise
+          vibe
+          style
+        }
+      }
+    }
+  }
+`
