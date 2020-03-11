@@ -24,15 +24,22 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/articles`,
+        path: `${__dirname}/src/content/articles`,
         name: 'newsArticles',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/projects`,
+        path: `${__dirname}/src/content/projects`,
         name: 'projects',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/content/employees`,
+        name: 'employees',
       },
     },
     {
@@ -40,6 +47,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `employeeImages`,
+        path: `${__dirname}/src/images/aboutUs`,
       },
     },
     {
